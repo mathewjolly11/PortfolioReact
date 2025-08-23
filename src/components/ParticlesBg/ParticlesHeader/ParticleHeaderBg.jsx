@@ -3,143 +3,49 @@ import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 
 export default function ParticleHeaderBg() {
-    const particlesInit = async (main) => {
-        console.log(main);
-    
-        // you can initialize the tsParticles instance (main) here, adding custom shapes or presets
-        // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
-        // starting from v2 you can add only the features you need reducing the bundle size
-        await loadFull(main);
-      };
-    
-      const particlesLoaded = (container) => {
-        console.log(container);
-      };
-      return (
-        <Particles
-          id="tsparticles"
-          init={particlesInit}
-          loaded={particlesLoaded}
-          className="particles-2-css"
+  const particlesInit = async (main) => {
+    await loadFull(main);
+  };
+
+  const particlesLoaded = (container) => {
+    console.log(container);
+  };
+
+  return (
+    <Particles
+      id="tsparticles"
+      init={particlesInit}
+      loaded={particlesLoaded}
+      className="particles-2-css"
       options={{
         background: {
+          color: "#000",
           position: "50% 50%",
           repeat: "no-repeat",
           size: "cover",
-          color: "#000"
         },
-        fullScreen: {
-          enable: false
-        },
+        fullScreen: { enable: false },
         interactivity: {
-          
           modes: {
             bubble: {
               distance: 400,
               duration: 2,
               opacity: 0.8,
               size: 10,
-              divs: {
-                distance: 200,
-                duration: 0.4,
-                mix: false,
-                selectors: [],
-              },
             },
-            grab: {
-              distance: 400,
-            },
+            grab: { distance: 400 },
             repulse: {
-              divs: {
-                distance: 200,
-                duration: 0.4,
-                factor: 100,
-                speed: 1,
-                maxSpeed: 50,
-                easing: "ease-out-quad",
-                selectors: [],
-              },
+              divs: { distance: 200, duration: 0.4, speed: 1 },
             },
           },
         },
         particles: {
-          color: {
-            value: "#ffffff",
-          },
-          links: {
-            color: {
-              value: "#000",
-            },
-            distance: 150,
-            opacity: 0.4,
-          },
-          move: {
-            attract: {
-              rotate: {
-                x: 600,
-                y: 1200,
-              },
-            },
-            enable: true,
-            outModes: {
-              bottom: "out",
-              left: "out",
-              right: "out",
-              top: "out",
-            },
-          },
-          number: {
-            density: {
-              enable: true,
-            },
-            value: 24,
-          },
-          opacity: {
-            random: {
-              enable: true,
-            },
-            value: {
-              min: 0.1,
-              max: 1,
-            },
-            animation: {
-              enable: true,
-              speed: 1,
-              minimumValue: 0.2,
-            },
-          },
-          rotate: {
-            random: {
-              enable: true,
-            },
-            animation: {
-              enable: true,
-              speed: 5,
-            },
-            direction: "random",
-          },
+          number: { value: 25, density: { enable: true } },
+          move: { enable: true, outModes: { default: "out" } },
+          opacity: { value: { min: 0.3, max: 1 } },
           shape: {
+            type: "image",
             options: {
-              character: {
-                fill: false,
-                font: "Verdana",
-                style: "",
-                value: "*",
-                weight: "400",
-              },
-              char: {
-                fill: false,
-                font: "Verdana",
-                style: "",
-                value: "*",
-                weight: "400",
-              },
-              polygon: {
-                sides: 5,
-              },
-              star: {
-                sides: 5,
-              },
               image: [
                 {
                   src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg",
@@ -152,12 +58,7 @@ export default function ParticleHeaderBg() {
                   height: 20,
                 },
                 {
-                  src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg",
-                  width: 20,
-                  height: 20,
-                },
-                {
-                  src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-plain-wordmark.svg",
+                  src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg",
                   width: 20,
                   height: 20,
                 },
@@ -167,157 +68,61 @@ export default function ParticleHeaderBg() {
                   height: 20,
                 },
                 {
-                  src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
-                  width: 20,
-                  height: 20,
-                },
-                {
-                  src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
-                  width: 20,
-                  height: 20,
-                },
-                {
-                  src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-plain-wordmark.svg",
-                  width: 20,
-                  height: 20,
-                },
-                {
                   src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
                   width: 20,
                   height: 20,
                 },
                 {
-                  src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg",
+                  src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg",
                   width: 20,
                   height: 20,
                 },
                 {
-                  src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
+                  src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
                   width: 20,
                   height: 20,
                 },
                 {
-                  src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
+                  src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+                  width: 20,
+                  height: 20,
+                }, // GitHub white
+                {
+                  src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg",
                   width: 20,
                   height: 20,
                 },
                 {
-                  src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
+                  src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg",
                   width: 20,
                   height: 20,
-                },
-              ],
-              images: [
+                }, // Vercel white
                 {
-                  src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg",
+                  src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg",
                   width: 20,
                   height: 20,
-                },
+                }, // Photoshop blue
                 {
-                  src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg",
+                  src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg",
                   width: 20,
                   height: 20,
-                },
+                }, // VS Code blue
                 {
-                  src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg",
+                  src: "https://www.easyicon.net/api/resizeApi.php?id=1181176&size=128",
                   width: 20,
                   height: 20,
-                },
+                }, // WampServer pink
                 {
-                  src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-plain-wordmark.svg",
-                  width: 20,
-                  height: 20,
-                },
-                {
-                  src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-                  width: 20,
-                  height: 20,
-                },
-                {
-                  src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
-                  width: 20,
-                  height: 20,
-                },
-                {
-                  src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
-                  width: 20,
-                  height: 20,
-                },
-                {
-                  src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-plain-wordmark.svg",
-                  width: 20,
-                  height: 20,
-                },
-                {
-                  src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
-                  width: 20,
-                  height: 20,
-                },
-                {
-                  src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg",
-                  width: 20,
-                  height: 20,
-                },
-                {
-                  src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
-                  width: 20,
-                  height: 20,
-                },
-                {
-                  src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
-                  width: 20,
-                  height: 20,
-                },
-                {
-                  src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
+                  src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg",
                   width: 20,
                   height: 20,
                 },
               ],
             },
-            type: "image",
           },
-          size: {
-            value: 50,
-            animation: {
-              speed: 40,
-              minimumValue: 0.1,
-            },
-          },
-          stroke: {
-            width: "100px",
-            color: {
-              value: "#000000",
-              animation: {
-                h: {
-                  count: 0,
-                  enable: false,
-                  offset: 0,
-                  speed: 1,
-                  decay: 0,
-                  sync: true,
-                },
-                s: {
-                  count: 0,
-                  enable: false,
-                  offset: 0,
-                  speed: 1,
-                  decay: 0,
-                  sync: true,
-                },
-                l: {
-                  count: 0,
-                  enable: false,
-                  offset: 0,
-                  speed: 1,
-                  decay: 0,
-                  sync: true,
-                },
-              },
-            },
-          },
+          size: { value: 40, animation: { speed: 20 } },
         },
       }}
-    ></Particles>
+    />
   );
 }

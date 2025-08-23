@@ -1,21 +1,20 @@
-import React from 'react';
-import './AboutPage.css'
+import React from "react";
+import "./AboutPage.css";
 
-/* Componet */
-import HeaderPage from '../../components/Header/HeaderPage';
-import Footer from '../../components/Footer/Footer';
+/* Components */
+import HeaderPage from "../../components/Header/HeaderPage";
+import Footer from "../../components/Footer/Footer";
 import ParticleBackground from "../../components/ParticlesBg/ParticleBackground";
-import ScrollToTop from '../../components/ScrollToTop/ScrollToTop';
-import cv from '../../cv/cv.pdf';
+import ScrollToTop from "../../components/ScrollToTop/ScrollToTop";
+import cv from "../../cv/cv.pdf";
 
 /* Multi idioma */
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage } from "react-intl";
 
 /* Img */
-import imgabout from '../../img/home.jpg';
+import imgabout from "../../img/Home.jpg";
 
 const About = () => {
-
   function readMore() {
     let btnHide = document.querySelector("#btn-hide");
     let parrafoActive = document.querySelector(".parrafo-active");
@@ -31,9 +30,7 @@ const About = () => {
 
   return (
     <div>
-
       <HeaderPage />
-
       <ParticleBackground />
 
       <main>
@@ -41,135 +38,327 @@ const About = () => {
           <div className="sobre-mi-container">
             <div className="sobre-mi-img-container">
               <img src={imgabout} alt="" className="sobre-mi-img" />
-              
-              <a href={cv} target="_blank" rel="noopener noreferrer" download="cv.pdf" className="btn-codigo cv buttonDownload">
-                  <FormattedMessage
-                      id='btn-cv'
-                      defaultMessage='Download CV'
-                  />
+
+              <a
+                href={cv}
+                target="_blank"
+                rel="noopener noreferrer"
+                download="cv.pdf"
+                className="btn-codigo cv buttonDownload"
+              >
+                <FormattedMessage id="btn-cv" defaultMessage="Download CV" />
               </a>
             </div>
             <div className="sobre-mi-info">
               <p>
                 <FormattedMessage
-                  id='about-info-1'
-                  defaultMessage="Hi, I'm Esteban Nahuel Carrizo, a student at the Technological University of Tucumán; I consider myself a person passionate about programming and web development since in 2020 I had the opportunity to get to know this world of the front-end and I was able to create my first web page only using HTML and CSS from there, I felt a great passion for web development, since you can do amazing things knowing how to use HTML, CSS, JavaScript and to this day I still feel that same passion when I create a web page."
+                  id="about-info-1"
+                  defaultMessage="Hi, I'm Mathew Jolly — a passionate web designer and web developer with 3 years of experience. Since I started creating websites, I’ve been fascinated by how design and technology come together to build amazing digital experiences. Every project I work on fuels my creativity and keeps me motivated to grow as a developer."
                 />
               </p>
 
               <div className="hide parrafo-active">
                 <p>
                   <FormattedMessage
-                    id='about-info-2'
-                    defaultMessage='I consider myself a self-taught person since I like to be constantly learning day by day, both new technologies and new development methods that help me polish and raise my level of learning.'
+                    id="about-info-2"
+                    defaultMessage="I’m self-taught and constantly learning — always exploring new technologies, frameworks, and best practices to improve my craft. I believe in continuous growth and adapting to the ever-changing world of web development."
                   />
                 </p>
 
                 <p>
                   <FormattedMessage
-                    id='about-info-3'
-                    defaultMessage="I have experience working as a freelance web designer and developer, which gave me the opportunity to work on many interesting projects, adapting to the client's needs and budget, which allowed me to improve my skills and knowledge; Additionally, I have also had the opportunity to be part of some online and face-to-face courses that helped me enrich my skills and learn a little more about this beautiful world of web development."
+                    id="about-info-3"
+                    defaultMessage="Over the past few years, I’ve worked on a variety of personal and freelance projects, where I’ve sharpened my skills and learned how to deliver solutions that meet both technical and creative needs. My ultimate goal is to create impactful, user-friendly, and innovative digital experiences."
+                  />
+                </p>
+
+                <p>
+                  <FormattedMessage
+                    id="about-info-4"
+                    defaultMessage="Beyond coding, I enjoy cycling, programming as a hobby, and coming up with new inventions — activities that keep me inspired and innovative in my work."
                   />
                 </p>
               </div>
 
               <div className="btn-info">
-                <div className="custom-btn btn-codigo" id="btn-hide" onClick={readMore}><span>Read more</span></div>
+                <div
+                  className="custom-btn btn-codigo"
+                  id="btn-hide"
+                  onClick={readMore}
+                >
+                  <span>Read more</span>
+                </div>
               </div>
             </div>
-
           </div>
 
           <div className="skill-seccion">
             <h1 className="heading">Skills</h1>
             <div className="skill-container">
-              <div className="skill-card" data-aos="flip-left" data-aos-delay="300">
-                <img alt="HTML" className="skills-img icon-li" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" title="HTML5" />
+              {/* HTML */}
+              <div
+                className="skill-card"
+                data-aos="flip-left"
+                data-aos-delay="300"
+              >
+                <img
+                  alt="HTML"
+                  className="skills-img icon-li"
+                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg"
+                  title="HTML5"
+                />
                 <h2 className="skill-name">HTML</h2>
                 <p className="skill-info">
                   <FormattedMessage
-                    id='about-skills-1'
-                    defaultMessage='More than a year of professional experience in this language, allows me to perform without problems in the industry.'
+                    id="about-skills-1"
+                    defaultMessage="Solid experience building semantic and accessible structures for modern websites."
                   />
                 </p>
               </div>
-              <div className="skill-card" data-aos="flip-up" data-aos-delay="300">
-                <img alt="CSS" className="skills-img icon-li" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" title="CSS3" />
+
+              {/* CSS */}
+              <div
+                className="skill-card"
+                data-aos="flip-up"
+                data-aos-delay="300"
+              >
+                <img
+                  alt="CSS"
+                  className="skills-img icon-li"
+                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg"
+                  title="CSS3"
+                />
                 <h2 className="skill-name">CSS</h2>
                 <p className="skill-info">
                   <FormattedMessage
-                    id='about-skills-2'
-                    defaultMessage='More than a year of work experience in this language, I use it daily to develop web designs and interfaces.'
+                    id="about-skills-2"
+                    defaultMessage="Skilled in creating responsive layouts and modern UI designs with CSS and preprocessors."
                   />
                 </p>
               </div>
-              <div className="skill-card" data-aos="flip-right" data-aos-delay="300">
-                <img alt="Js" className="skills-img icon-li" src="https://cdn.iconscout.com/icon/free/png-256/javascript-2752148-2284965.png" title="Java Script" />
-                <h2 className="skill-name">Javascript</h2>
+
+              {/* JavaScript */}
+              <div
+                className="skill-card"
+                data-aos="flip-right"
+                data-aos-delay="300"
+              >
+                <img
+                  alt="Js"
+                  className="skills-img icon-li"
+                  src="https://cdn.iconscout.com/icon/free/png-256/javascript-2752148-2284965.png"
+                  title="JavaScript"
+                />
+                <h2 className="skill-name">JavaScript</h2>
                 <p className="skill-info">
                   <FormattedMessage
-                    id='about-skills-3'
-                    defaultMessage='A year of experience using it in the front-end and back-end branch, allowed me to familiarize myself with the language, and include it in my work projects.'
+                    id="about-skills-3"
+                    defaultMessage="3 years of experience using JavaScript for both front-end and back-end development."
                   />
                 </p>
               </div>
-              <div className="skill-card" data-aos="flip-left" data-aos-delay="300">
-                <img alt="Sass" className="skills-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" title="Sass" />
-                <h2 className="skill-name">Sass</h2>
+
+              {/* React */}
+              <div
+                className="skill-card"
+                data-aos="flip-left"
+                data-aos-delay="300"
+              >
+                <img
+                  alt="React"
+                  className="skills-img"
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                  title="React"
+                />
+                <h2 className="skill-name">React</h2>
                 <p className="skill-info">
                   <FormattedMessage
-                    id='about-skills-4'
-                    defaultMessage='One year using this preprocessor in the professional field, I include it in many of my projects since it allows me a better structured code.'
+                    id="about-skills-4"
+                    defaultMessage="Experience building interactive, scalable, and dynamic applications with React."
                   />
                 </p>
               </div>
-              <div className="skill-card" data-aos="flip-down" data-aos-delay="300">
-                <img alt="Bootstrap" className="skills-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" title="Bootstrap" />
-                <h2 className="skill-name">Bootstrap</h2>
+
+              {/* Node.js */}
+              <div
+                className="skill-card"
+                data-aos="flip-up"
+                data-aos-delay="300"
+              >
+                <img
+                  alt="NodeJs"
+                  className="skills-img"
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                  title="Node.js"
+                />
+                <h2 className="skill-name">Node.js</h2>
                 <p className="skill-info">
                   <FormattedMessage
-                    id='about-skills-5'
-                    defaultMessage='Less than a year using this framework, even so, I used it in countless work projects, which allowed me to get to know it for the most part.'
+                    id="about-skills-5"
+                    defaultMessage="Proficient in creating back-end services and APIs with Node.js and Express."
                   />
                 </p>
               </div>
-              <div className="skill-card" data-aos="flip-right" data-aos-delay="300">
-                <img alt="jQuery" className="skills-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-plain-wordmark.svg" title="jQuery" />
-                <h2 className="skill-name">jQuery</h2>
+
+              {/* PHP */}
+              <div
+                className="skill-card"
+                data-aos="flip-left"
+                data-aos-delay="300"
+              >
+                <img
+                  alt="PHP"
+                  className="skills-img"
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"
+                  title="PHP"
+                />
+                <h2 className="skill-name">PHP</h2>
                 <p className="skill-info">
                   <FormattedMessage
-                    id='about-skills-6'
-                    defaultMessage='A year using this bookstore in the personal and work environment, it is one of the bookstores that I use and manipulate the most.'
+                    id="about-skills-6"
+                    defaultMessage="Strong experience in developing dynamic web applications using PHP."
                   />
                 </p>
               </div>
-              <div className="skill-card" data-aos="flip-right" data-aos-delay="300">
-                <img alt="react" className="skills-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" title="jQuery" />
-                <h2 className="skill-name">ReactJs</h2>
+
+              {/* MySQL */}
+              <div
+                className="skill-card"
+                data-aos="flip-up"
+                data-aos-delay="300"
+              >
+                <img
+                  alt="MySQL"
+                  className="skills-img"
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+                  title="MySQL"
+                />
+                <h2 className="skill-name">MySQL</h2>
                 <p className="skill-info">
                   <FormattedMessage
-                    id='about-skills-7'
-                    defaultMessage='More than a year using this JavaScript framework, carrying out multiple personal and work projects.'
+                    id="about-skills-7"
+                    defaultMessage="Experienced in designing and managing relational databases with MySQL."
                   />
                 </p>
               </div>
-              <div className="skill-card" data-aos="flip-up" data-aos-delay="300">
-                <img alt="nodejs" className="skills-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" title="jQuery" />
-                <h2 className="skill-name">NodeJs</h2>
+
+              {/* C */}
+              <div
+                className="skill-card"
+                data-aos="flip-right"
+                data-aos-delay="300"
+              >
+                <img
+                  alt="C"
+                  className="skills-img"
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg"
+                  title="C"
+                />
+                <h2 className="skill-name">C</h2>
                 <p className="skill-info">
                   <FormattedMessage
-                    id='about-skills-8'
-                    defaultMessage='It is the cross-platform runtime environment that I use to make my web applications scalable.'
+                    id="about-skills-8"
+                    defaultMessage="Solid foundation in problem-solving and algorithms using C language."
                   />
                 </p>
               </div>
-              <div className="skill-card" data-aos="flip-left" data-aos-delay="300">
-                <img alt="express" className="skills-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" title="jQuery" />
-                <h2 className="skill-name">Express</h2>
+
+              {/* C++ */}
+              <div
+                className="skill-card"
+                data-aos="flip-left"
+                data-aos-delay="300"
+              >
+                <img
+                  alt="C++"
+                  className="skills-img"
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"
+                  title="C++"
+                />
+                <h2 className="skill-name">C++</h2>
                 <p className="skill-info">
                   <FormattedMessage
-                    id='about-skills-9'
-                    defaultMessage='It is a framework that I use mostly to be able to manage my APIs in the best way and my http execution model.'
+                    id="about-skills-9"
+                    defaultMessage="Good knowledge of object-oriented programming and system-level problem solving in C++."
+                  />
+                </p>
+              </div>
+
+              {/* Java */}
+              <div
+                className="skill-card"
+                data-aos="flip-up"
+                data-aos-delay="300"
+              >
+                <img
+                  alt="Java"
+                  className="skills-img"
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+                  title="Java"
+                />
+                <h2 className="skill-name">Java</h2>
+                <p className="skill-info">
+                  <FormattedMessage
+                    id="about-skills-10"
+                    defaultMessage="Experience in Java programming, building applications and understanding OOP concepts."
+                  />
+                </p>
+              </div>
+              <div
+                className="skill-card"
+                data-aos="flip-right"
+                data-aos-delay="300"
+              >
+                <img
+                  alt="Git"
+                  className="skills-img"
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+                  title="Git"
+                />
+                <h2 className="skill-name">Git</h2>
+                <p className="skill-info">
+                  <FormattedMessage
+                    id="about-skills-6"
+                    defaultMessage="Version control expert, experienced with branching, merging, and collaboration workflows using Git."
+                  />
+                </p>
+              </div>
+
+              <div
+                className="skill-card"
+                data-aos="flip-left"
+                data-aos-delay="300"
+              >
+                <img
+                  alt="GitHub"
+                  className="skills-img"
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+                  title="GitHub"
+                />
+                <h2 className="skill-name">GitHub</h2>
+                <p className="skill-info">
+                  <FormattedMessage
+                    id="about-skills-7"
+                    defaultMessage="Experienced with hosting, collaborating, and managing projects on GitHub."
+                  />
+                </p>
+              </div>
+              <div
+                className="skill-card"
+                data-aos="flip-up"
+                data-aos-delay="300"
+              >
+                <img
+                  alt="VS Code"
+                  className="skills-img"
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
+                  title="Visual Studio Code"
+                />
+                <h2 className="skill-name">VS Code</h2>
+                <p className="skill-info">
+                  <FormattedMessage
+                    id="about-skills-8"
+                    defaultMessage="Efficient in using VS Code with extensions and debugging tools to boost productivity."
                   />
                 </p>
               </div>
@@ -179,10 +368,8 @@ const About = () => {
       </main>
 
       <ScrollToTop />
-
       <Footer />
-
     </div>
-  )
-}
+  );
+};
 export default About;
