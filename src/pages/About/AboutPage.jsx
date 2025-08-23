@@ -12,7 +12,7 @@ import cv from "../../cv/cv.pdf";
 import { FormattedMessage } from "react-intl";
 
 /* Img */
-import imgabout from "../img/Home.jpg";
+import imgabout from "../../img/Home.jpg";
 
 const About = () => {
   function readMore() {
