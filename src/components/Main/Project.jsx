@@ -8,7 +8,7 @@ import { FormattedMessage } from 'react-intl';
 
 /* Swiper */
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, Autoplay } from 'swiper';
+import { Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
@@ -46,7 +46,6 @@ const Project = () => {
                     }}
                     className="proyectos-slider mySwiper"
                 >
-                    {/* Example Slide 1 */}
                     <SwiperSlide className='caja'>
                         <img src={proyectImg(`./proyecto-app-18.png`)} alt='proyectos' />
                         <div className="content">
@@ -60,7 +59,6 @@ const Project = () => {
                         </div>
                     </SwiperSlide>
 
-                    {/* Example Slide 2 */}
                     <SwiperSlide className='caja'>
                         <img src={proyectImg(`./proyecto-14.jpg`)} alt='proyectos' />
                         <div className="content">
@@ -73,11 +71,7 @@ const Project = () => {
                             <a href="https://github.com/Nahuel61920/Justice" className="custom-btn btn-codigo" target="_blank" rel="noopener noreferrer">Repository</a>
                         </div>
                     </SwiperSlide>
-
-                    {/* Add all remaining SwiperSlide blocks here, following the same pattern */}
                 </Swiper>
-
-                <div className="swiper-pagination"></div>
             </div>
 
             <div className='portafolio-btn'>
